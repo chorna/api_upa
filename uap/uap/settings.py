@@ -25,7 +25,7 @@ SECRET_KEY = 'ua&2$p24%j490j!%upg*z%pk$fm8aes&bmhg^w)8*qibx$&%#c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['172.18.31.121', 'localhost',]
+ALLOWED_HOSTS = ['172.18.31.121', 'localhost', 'demo-api-uap.herokuapp.com']
 
 
 # Application definition
