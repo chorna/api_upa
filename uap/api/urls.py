@@ -14,11 +14,17 @@ router.register(r'profesor_lista', views.ProfesorLista)
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
-    #path('', include(router.urls)),
-    path('logins', views.ExampleView.as_view()),
+    path('login', views.login),
     path('alumnos', views.AlumnoLista.as_view()),
-    path('alumnos_detalle/<int:pk>/', views.AlumnoDetalle.as_view()),
+    path('alumno/<int:pk>/', views.AlumnoDetalle.as_view()),
     path('profesores', views.ProfesorLista.as_view()),
+    path('profesor/<int:pk>/', views.ProfesorDetalle.as_view()),
+    path('cursos', views.CursoLista.as_view()),
+    path('curso/<int:pk>/', views.CursoDetalle.as_view()),
+    path('notas', views.NotaLista.as_view()),
+    path('nota/<int:pk>/', views.NotaDetalle.as_view()),
+    path('notas/seccion/<int:pk>/', views.nota_seccion_lista),
+    #path('notas/alumno/<int:pk>/', views.NotaAlumnoLista.as_view()),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    #url('alumnos/', views.AlumnoViewSet),
+    path('sampleapi', views.sample_api)
 ]

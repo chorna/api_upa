@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 
-from .models import Alumno, Profesor
+from .models import Alumno, Profesor, Curso, Nota
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -19,10 +19,22 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 class AlumnoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Alumno
-        fields = ('nombre', 'correo')
+        fields = '__all__'
 
 
 class ProfesorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profesor
-        fields = ('nombre', 'correo')
+        fields = '__all__'
+
+
+class CursoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Curso
+        fields = '__all__'
+
+
+class NotaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Nota
+        fields = '__all__'
