@@ -78,15 +78,14 @@ WSGI_APPLICATION = 'uap.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'uap',
-        'USER': 'root',
-        'PASSWORD': 'x*123*x',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dees6b7i4gjag',
+        'USER': 'eqscurlvqhucai',
+        'PASSWORD': 'f8a66128548dfa01247ba1f432e7d84c940c66078e1ca2c54107a99c30d58092',
+        'HOST': 'ec2-54-227-249-201.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
